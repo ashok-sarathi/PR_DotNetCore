@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace DotNetCoreSqlServerJwtSample.Helper
 {
     public interface IJwtHelper
     {
-        string GetJwtToken();
+        string GetJwtToken(IEnumerable<Claim> claims = null);
         bool ValidateJwtToken(string token);
     }
     public class JwtHelper : IJwtHelper
@@ -22,7 +23,7 @@ namespace DotNetCoreSqlServerJwtSample.Helper
             _configuration = configuration ?? throw new Exception(nameof(configuration));
         }
 
-        public string GetJwtToken()
+        public string GetJwtToken(IEnumerable<Claim> claims = null)
         {
             string issuer = _configuration["Jwt:Issuer"];
             string audience = _configuration["Jwt:Audience"];
@@ -31,7 +32,7 @@ namespace DotNetCoreSqlServerJwtSample.Helper
 
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
-            var token = new JwtSecurityToken(issuer: issuer, audience: audience, expires: expiry, signingCredentials: credentials);
+            var token = new JwtSecurityToken(issuer: issuer, audience: audience, expires: expiry, signingCredentials: credentials, claims: claims);
 
             var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -56,7 +57,7 @@ namespace DotNetCoreSqlServerJwtSample.Helper
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]))
                 }, out SecurityToken securityToken);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return false;
             }

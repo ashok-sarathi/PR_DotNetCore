@@ -12,11 +12,26 @@ namespace DotNetCoreData.Mapping.Identity
     public class UserMapping : IEntityTypeConfiguration<User>
     {
         public const int FirstNameMaxLength = 100;
+        public const int LastNameMaxLength = 100;
         public void Configure(EntityTypeBuilder<User> builder)
         {
             builder
                 .Property(p => p.FirstName)
+                .IsRequired()
                 .HasMaxLength(FirstNameMaxLength);
+
+            builder
+                .Property(p => p.LastName)
+                .IsRequired()
+                .HasMaxLength(LastNameMaxLength);
+
+            builder
+                .Property(p => p.Email)
+                .IsRequired();
+
+            builder
+                .Property(p => p.Password)
+                .IsRequired();
         }
     }
 }
