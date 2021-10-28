@@ -12,6 +12,7 @@ namespace DotNetCoreSqlServerJwtSample.Helper
     public interface IJwtHelper
     {
         string GetJwtToken();
+        bool ValidateJwtToken(string token);
     }
     public class JwtHelper : IJwtHelper
     {
@@ -35,6 +36,31 @@ namespace DotNetCoreSqlServerJwtSample.Helper
             var tokenHandler = new JwtSecurityTokenHandler();
 
             return tokenHandler.WriteToken(token);
+        }
+
+        public bool ValidateJwtToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+
+            try
+            {
+
+                tokenHandler.ValidateToken(token, new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = _configuration["Jwt:Issuer"],
+                    ValidAudience = _configuration["Jwt:Audience"],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]))
+                }, out SecurityToken securityToken);
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
