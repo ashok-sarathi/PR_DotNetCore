@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetCoreSqlServerJwtSample.Helper;
+using DotNetCoreService.Base;
 
 namespace DotNetCoreSqlServerJwtSample
 {
@@ -25,11 +26,13 @@ namespace DotNetCoreSqlServerJwtSample
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DotNetCoreDbContext>(option => {
+            services.AddDbContext<DotNetCoreDbContext>(option =>
+            {
                 option.UseSqlServer(Configuration.GetConnectionString("SqlServer"));
             });
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option => {
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(option =>
+            {
                 option.TokenValidationParameters = new TokenValidationParameters()
                 {
                     ValidateIssuer = true,
@@ -43,6 +46,8 @@ namespace DotNetCoreSqlServerJwtSample
             });
 
             services.AddScoped<IJwtHelper, JwtHelper>();
+
+            services.RegisterService();
 
             services.AddControllers();
 

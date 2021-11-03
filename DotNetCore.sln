@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreSqlServerJwtSample", "DotNetCoreSqlServerJwtSample\DotNetCoreSqlServerJwtSample.csproj", "{B0D27020-D8A5-47E8-9212-55947463D41F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreSqlServerJwtSample", "DotNetCoreSqlServerJwtSample\DotNetCoreSqlServerJwtSample.csproj", "{B0D27020-D8A5-47E8-9212-55947463D41F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreEntity", "DotNetCoreEntity\DotNetCoreEntity.csproj", "{AE4472D8-38F0-4F00-A9F9-C97E80AD9A41}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreEntity", "DotNetCoreEntity\DotNetCoreEntity.csproj", "{AE4472D8-38F0-4F00-A9F9-C97E80AD9A41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreData", "DotNetCoreData\DotNetCoreData.csproj", "{E6A116D4-E7F5-4436-97A1-66FD614EF271}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreData", "DotNetCoreData\DotNetCoreData.csproj", "{E6A116D4-E7F5-4436-97A1-66FD614EF271}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreService", "DotNetCoreService\DotNetCoreService.csproj", "{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E6A116D4-E7F5-4436-97A1-66FD614EF271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6A116D4-E7F5-4436-97A1-66FD614EF271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6A116D4-E7F5-4436-97A1-66FD614EF271}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DotNetCoreData\DotNetCoreData.csproj" />
+    <ProjectReference Include="..\DotNetCoreService\DotNetCoreService.csproj" />
   </ItemGroup>
 
 </Project>

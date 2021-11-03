@@ -1,5 +1,6 @@
 ﻿using DotNetCoreData;
 using DotNetCoreEntity.Identity;
+using DotNetCoreService.Identity;
 using DotNetCoreSqlServerJwtSample.Helper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ namespace DotNetCoreSqlServerJwtSample.Controllers.Identity
         private readonly IJwtHelper _jwtHelper;
         private readonly DotNetCoreDbContext _context;
 
-        public UserController(IJwtHelper jwtHelper, DotNetCoreDbContext context)
+        public UserController(IJwtHelper jwtHelper, DotNetCoreDbContext context, IUserService userService)
         {
             _context = context ?? throw new Exception(nameof(context));
             _jwtHelper = jwtHelper ?? throw new Exception(nameof(jwtHelper));
