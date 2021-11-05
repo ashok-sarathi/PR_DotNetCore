@@ -44,6 +44,8 @@ namespace DotNetCoreService.Base
                 if (implementationType != null)
                     services.AddSingleton(interfaceType, implementationType);
             }
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
         }
     }
 }
