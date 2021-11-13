@@ -20,6 +20,9 @@ namespace ScaffoldDbLib
             END
             GO");
             context.Users.FromSqlRaw("EXEC TestSp");
+
+            var data = context.Users.Include(p => p.Grade).FirstOrDefault();
+            var dd = data.Grade.GradeName;
         }
     }
 }

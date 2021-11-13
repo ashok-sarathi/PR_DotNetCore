@@ -17,6 +17,7 @@ namespace ScaffoldDbLib.Models
         {
         }
 
+        public virtual DbSet<Grade> Grades { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -32,6 +33,18 @@ namespace ScaffoldDbLib.Models
         {
             modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
 
+            modelBuilder.Entity<Grade>(entity =>
+            {
+                entity.ToTable("Grade");
+
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.GradeName)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("User");
@@ -42,6 +55,12 @@ namespace ScaffoldDbLib.Models
                     .IsRequired()
                     .HasMaxLength(50)
                     .IsUnicode(false);
+
+                entity.HasOne(d => d.Grade)
+                    .WithMany(p => p.Users)
+                    .HasForeignKey(d => d.GradeId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_User_Grade");
             });
 
             OnModelCreatingPartial(modelBuilder);
