@@ -9,7 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreEntity", "DotNetC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreData", "DotNetCoreData\DotNetCoreData.csproj", "{E6A116D4-E7F5-4436-97A1-66FD614EF271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreService", "DotNetCoreService\DotNetCoreService.csproj", "{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCoreService", "DotNetCoreService\DotNetCoreService.csproj", "{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaffoldFromDb", "ScaffoldFromDb\ScaffoldFromDb.csproj", "{B06512AE-121D-489E-961D-9C3728058AE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaffoldDbLib", "ScaffoldDbLib\ScaffoldDbLib.csproj", "{70771E66-FD53-493D-8A8B-DC30DA15380C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B06512AE-121D-489E-961D-9C3728058AE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B06512AE-121D-489E-961D-9C3728058AE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B06512AE-121D-489E-961D-9C3728058AE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B06512AE-121D-489E-961D-9C3728058AE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
