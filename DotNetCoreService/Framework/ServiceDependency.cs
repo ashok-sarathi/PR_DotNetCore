@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DotNetCoreService.Base
+namespace DotNetCoreService.Framework
 {
     public interface IScopedDependency
     {

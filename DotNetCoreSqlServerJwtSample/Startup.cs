@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using DotNetCoreSqlServerJwtSample.Helper;
-using DotNetCoreService.Base;
+using DotNetCoreService.Framework;
 
 namespace DotNetCoreSqlServerJwtSample
 {

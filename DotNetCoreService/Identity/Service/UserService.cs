@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using DotNetCoreEntity.Identity;
-using DotNetCoreService.Base;
+using DotNetCoreService.Framework;
 using DotNetCoreService.Identity.Model;
 using System;
 using System.Collections.Generic;
