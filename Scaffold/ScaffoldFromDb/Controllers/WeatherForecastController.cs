@@ -11,29 +11,52 @@ namespace ScaffoldFromDb.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        [HttpGet("[action]")]
+        public void Get()
         {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
 
-        private readonly ILogger<WeatherForecastController> _logger;
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {
-            _logger = logger;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("[action]/{id}")]
+        public void Get1(int id)
         {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
+
         }
+
+        [HttpGet("[action]")]
+        public void Get2(int id, string name)
+        {
+
+        }
+
+        [HttpGet("[action]")]
+        public void Get3([FromQuery] Dom dom)
+        {
+
+        }
+
+        [HttpPost("[action]")]
+        public void Create([FromBody] Dom dom)
+        {
+
+        }
+
+        [HttpPut("[action]/id")]
+        public void Update(int id, [FromBody] Dom dom)
+        {
+
+        }
+
+        [HttpDelete("[action]/id")]
+        public void Delete(int id)
+        {
+
+        }
+    }
+
+    public class Dom
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }
