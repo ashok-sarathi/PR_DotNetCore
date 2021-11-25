@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DotNetCore", "DotNetCore", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scaffold", "Scaffold", "{0E3A770E-BB07-4C58-AF79-36B1815EDB70}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{E68EC4A0-ED96-4AEB-A2BF-F6BA22625B53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestInheritance", "TestInheritance\TestInheritance.csproj", "{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +53,10 @@ Global
 		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70771E66-FD53-493D-8A8B-DC30DA15380C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,7 @@ Global
 		{CF2EB16A-ADCC-4EE6-8FB5-F005B8DD1F76} = {D4E0D7FB-48B4-4B1D-90F2-CE3B841AF21F}
 		{B06512AE-121D-489E-961D-9C3728058AE7} = {0E3A770E-BB07-4C58-AF79-36B1815EDB70}
 		{70771E66-FD53-493D-8A8B-DC30DA15380C} = {0E3A770E-BB07-4C58-AF79-36B1815EDB70}
+		{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351} = {E68EC4A0-ED96-4AEB-A2BF-F6BA22625B53}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0C9A0D3-8E8A-4140-B861-AD8618D1E3D5}
