@@ -16,6 +16,8 @@ namespace TestInheritance
             Student student2 = new Student() { Age = 30 };
 
             Console.WriteLine(student1 + student2);
+            Console.WriteLine(student1 - student2 + new Student() { Age = 10 });
+            Console.WriteLine(1 - new Student() { Age = 10 });
 
             Console.ReadLine();
         }
@@ -29,6 +31,16 @@ namespace TestInheritance
         public static int operator +(Student student1, Student student2)
         {
             return student1.Age + student2.Age;
+        }
+
+        public static Student operator -(Student student1, Student student2)
+        {
+            return new Student() { Age = student1.Age - student2.Age };
+        }
+
+        public static int operator -(int student1, Student student2)
+        {
+            return student1 - student2.Age;
         }
     }
 
