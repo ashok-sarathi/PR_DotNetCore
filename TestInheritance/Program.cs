@@ -84,7 +84,7 @@ namespace TestInheritance
 
     public class Demo2 : Demo1
     {
-        public override void Show()
+        public virtual new void Show()
         {
             Console.WriteLine("Demo 2");
         }
