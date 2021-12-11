@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestInheritance", "TestInhe
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccessModifiers", "AccessModifiers", "{6FBAFE23-353F-4DD7-B96D-CB89AB3495B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiersConsole", "AccessModifiersConsole\AccessModifiersConsole.csproj", "{805C2388-F7A6-4D5D-8C3F-5A2C26461241}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiersConsole", "AccessModifiersConsole\AccessModifiersConsole.csproj", "{805C2388-F7A6-4D5D-8C3F-5A2C26461241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiersLib", "AccessModifiersLib\AccessModifiersLib.csproj", "{C050F831-1FEC-41CF-A2CB-4CFA125009DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiersLib", "AccessModifiersLib\AccessModifiersLib.csproj", "{C050F831-1FEC-41CF-A2CB-4CFA125009DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadingTest", "ThreadingTest\ThreadingTest.csproj", "{84E521CD-3DC4-4125-A192-BCC4B40421AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{C050F831-1FEC-41CF-A2CB-4CFA125009DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C050F831-1FEC-41CF-A2CB-4CFA125009DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C050F831-1FEC-41CF-A2CB-4CFA125009DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E521CD-3DC4-4125-A192-BCC4B40421AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E521CD-3DC4-4125-A192-BCC4B40421AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E521CD-3DC4-4125-A192-BCC4B40421AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E521CD-3DC4-4125-A192-BCC4B40421AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{96CBE4C1-49A6-4FFA-8D36-51F8D1E6C351} = {E68EC4A0-ED96-4AEB-A2BF-F6BA22625B53}
 		{805C2388-F7A6-4D5D-8C3F-5A2C26461241} = {6FBAFE23-353F-4DD7-B96D-CB89AB3495B1}
 		{C050F831-1FEC-41CF-A2CB-4CFA125009DD} = {6FBAFE23-353F-4DD7-B96D-CB89AB3495B1}
+		{84E521CD-3DC4-4125-A192-BCC4B40421AD} = {E68EC4A0-ED96-4AEB-A2BF-F6BA22625B53}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A0C9A0D3-8E8A-4140-B861-AD8618D1E3D5}

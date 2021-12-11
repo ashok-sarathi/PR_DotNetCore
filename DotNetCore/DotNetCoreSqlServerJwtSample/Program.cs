@@ -21,6 +21,12 @@ namespace DotNetCoreSqlServerJwtSample
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+
+                    webBuilder.ConfigureLogging((builder, logger) =>
+                    {
+                        logger.AddConsole();
+                        logger.AddDebug();
+                    });
                 });
     }
 }

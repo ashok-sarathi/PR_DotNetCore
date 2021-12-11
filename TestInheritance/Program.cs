@@ -102,4 +102,55 @@ namespace TestInheritance
             Console.WriteLine("Demo 3");
         }
     }
+
+    public abstract class MyAbstract
+    {
+        public abstract void Demo1();
+        public virtual void Demo3()
+        {
+
+        }
+        public void Demo2()
+        {
+
+        }
+    }
+
+    public abstract class MyAbstract2 : MyAbstract
+    {
+        public override void Demo1()
+        {
+
+        }
+
+        public new void Demo2()
+        {
+
+        }
+
+        public void Demo3()
+        {
+
+        }
+
+    }
+
+    public partial class P1
+    {
+        public partial void Demo()
+        {
+            int a = 0;
+        }
+    }
+
+    public partial class P1
+    {
+        public partial void Demo();
+    }
+
+    public partial class P1
+    {
+
+    }
+
 }
